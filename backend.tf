@@ -1,7 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "mybucket"
-    key    = "path/to/my/key"
+    bucket = "smanbucket4aosnotes"
+    key    = "terraform-state"
     region = "us-east-1"
+    profile = "terraform-user"
   }
 }

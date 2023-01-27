@@ -1,0 +1,26 @@
+LIST OF ERRORS,SOLUTION AND USEFUL LINKS
+########################################
+
+##Error:######### 
+Unable to Parse Config File Error in AWS CLI
+
+USEFUL LINK
+https://bobbyhadz.com/blog/aws-cli-unable-parse-config-file-credentials
+
+SOLUTION
+I had to delete .aws  and recreate it by using aws configure @CLI
+this recreated the profile  
+
+##Error:######### 
+Initializing the backend...
+╷
+│ Error: Backend configuration changed
+│
+│ A change in the backend configuration has been detected, which may require migrating existing state.
+│
+│ If you wish to attempt automatic migration of the state, use "terraform init -migrate-state".
+│ If you wish to store the current configuration with no changes to the state, use "terraform init -reconfigure".
+SOLUTION:
+This happened after creating s3 bucket ,i was trying to move my state file from local to s3 bucket in line with security best practises 
+
+Run terraform init -reconfigure
