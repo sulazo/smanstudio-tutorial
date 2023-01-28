@@ -1,20 +1,16 @@
-pipeline{
- agent any
+pipeline {
+    agent any
 
- stages{
+    stages {
+        stage('Fetch') {
 
-    stage("Fetch"){
+            git "git 'https://github.com/sulazo/smanstudio-tutorial.git'"
+        }
 
-
-        git "git 'https://github.com/sulazo/smanstudio-tutorial.git'"
+        stage('Push')
+        steps {
+            echo 'pushing'
+        }
     }
-
-    stage("Push")
-    steps{
-        echo "pushing"
-    }
- }
-
-
 
 }
