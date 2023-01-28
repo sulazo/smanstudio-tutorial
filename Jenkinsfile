@@ -3,14 +3,25 @@ pipeline {
 
     stages {
         stage('Fetch') {
-
-            git "git 'https://github.com/sulazo/smanstudio-tutorial.git'"
+            steps {
+                 git branch: 'main', url: 'https://github.com/sulazo/temp.git'
+            }
         }
 
-        stage('Push')
-        steps {
-            echo 'pushing'
+        stage('Push') {
+            steps {
+                echo 'pushing'
+            }
         }
     }
-
 }
+
+
+
+
+
+
+
+
+
+
