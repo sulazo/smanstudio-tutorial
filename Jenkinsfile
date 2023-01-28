@@ -9,7 +9,7 @@ pipeline{
         git "git 'https://github.com/sulazo/smanstudio-tutorial.git'"
     }
 
-    stage("Push)
+    stage("Push")
     steps{
         echo "pushing"
     }
