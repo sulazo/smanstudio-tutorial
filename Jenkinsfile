@@ -1,27 +1,27 @@
 pipeline {
     agent any
+    tools {
+        terraform 'terraform'
+    }
 
     stages {
         stage('Fetch') {
             steps {
-                 git branch: 'main', url: 'https://github.com/sulazo/smanstudio-tutorial.git'
+                git branch: 'main', url: 'https://github.com/sulazo/smanstudio-tutorial.git'
             }
         }
 
         stage('Terraform Init') {
             steps {
-                echo 'pushing'
-                // sh 'terraform init'
- 
+                sh 'terraform init'
             }
         }
         stage('Terraform Plan') {
             steps {
-                echo 'tf plan'
-                // sh 'terraform plan'
+                // echo 'tf plan'
+                sh 'terraform plan'
             }
         }
-
 
         // stage('Approval') {
         //     steps {
@@ -32,27 +32,15 @@ pipeline {
         //         }
         //         input message: "Are you sure you want to deploy to production?", ok: "Deploy"
 
-
         //     }
         // }
 
         stage('Terraform apply ') {
             steps {
-                
-                echo 'tf plan'
+                // echo 'tf plan'
 
-                // sh 'terraform apply -auto-approve'
+                sh 'terraform apply --auto-approve'
             }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
