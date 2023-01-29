@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Terraform Plan') {
             steps {
-                
+                echo 'tf plan'
                 // sh 'terraform plan'
             }
         }
@@ -39,6 +39,8 @@ pipeline {
         stage('Terraform apply ') {
             steps {
                 
+                echo 'tf plan'
+
                 // sh 'terraform apply -auto-approve'
             }
         }
