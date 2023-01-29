@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Fetch') {
             steps {
-                 git branch: 'main', url: 'https://github.com/sulazo/temp.git'
+                 git branch: 'main', url: 'https://github.com/sulazo/smanstudio-tutorial.git'
             }
         }
 
