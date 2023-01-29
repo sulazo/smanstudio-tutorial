@@ -12,6 +12,7 @@ pipeline {
             steps {
                 echo 'pushing'
                 sh 'terraform init'
+ 
             }
         }
         stage('Terraform Plan') {
