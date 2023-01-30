@@ -16,7 +16,6 @@ pipeline {
                 sh 'terraform init'
             }
         }
-      
 
         // stage('Approval') {
         //     steps {
@@ -30,12 +29,20 @@ pipeline {
         //     }
         // }
 
-        stage('Terraform apply ') {
-            steps {
-                // echo 'tf plan'
+        // stage('Terraform apply ') {
+        //     steps {
+        //         echo 'tf apply stage'
 
-                sh 'terraform apply --auto-approve'
-            }
-        }
+        //         sh 'terraform apply --auto-approve'
+        //     }
+        // }
+
+        //  stage('Terraform destroy ') {
+        //     steps {
+        //         echo 'tf destroy stage'
+
+    //         sh 'terraform destroy --auto-approve'
+    //     }
+    // }
     }
 }
