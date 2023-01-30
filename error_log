@@ -6,8 +6,8 @@ stdout:
 stderr: fatal: couldn't find remote ref refs/heads/master
 
 @SOLUTION
-This error was as a resolved by changing Branch  to master  from the default selection of Master in Jenkins
-By default Jenkins Branch is set to master which works for code with origin head master
+This error was as a resolved by changing Branch  to Main  from the default selection of Master in Jenkins
+By default Jenkins Branch is set to master which works for code with origin head Master
 
 ## Error:######### 
 configuring Terraform AWS Provider: failed to get shared config profile, terraform-user
