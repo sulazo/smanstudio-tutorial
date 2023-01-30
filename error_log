@@ -10,6 +10,16 @@ This error was as a resolved by changing Branch  to master  from the default sel
 By default Jenkins Branch is set to master which works for code with origin head master
 
 ## Error:######### 
+configuring Terraform AWS Provider: failed to get shared config profile, terraform-user
+Jenkins failed to run terraform apply becuase of this error
+
+@Solution
+I had to comment out profile in  provider block
+
+provider "aws" {
+  region  = "us-east-1"
+  # profile = "terraform-user"
+}
 
 ## Error:######### 
 
