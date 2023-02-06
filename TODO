@@ -1,4 +1,5 @@
-1.Create Jenkins file
+1.Create Jenkinsfile
 2Create Terraform codes
 3.set trigger for Jenkins
 4.Set approval  and email alert
+5.set tfp,tfa,tfmt  ... as environment variable  in .bashrc
