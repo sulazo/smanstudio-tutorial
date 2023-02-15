@@ -105,3 +105,32 @@
 #   subnet_id         = 
 #   route_table_id    = 
 # }
+
+
+
+###########################################################################
+#FROM openai
+
+
+# Create routes to the NAT Gateways in each private route table
+# resource "aws_route" "private_a" {
+#   route_table_id         = aws_route_table.private_a.id
+#   destination_cidr_block = "0.0.0.0/0"
+#   nat_gateway_id         = aws_nat_gateway.nat_a.id
+# }
+
+# resource "aws_route" "private_b" {
+#   route_table_id         = aws_route_table.private_b.id
+#   destination_cidr_block = "0.0.0.0/0"
+#   nat_gateway_id         = aws_nat_gateway.nat_b.id
+# }
+
+# # Associate the private route tables with the private subnets
+# resource "aws_route_table_association" "private_a" {
+#   subnet_id      = aws_subnet.subnet_a.id
+#   route_table_id = aws_route_table.private_a.id
+# }
+
+# resource "aws_route_table_association" "private_b" {
+#   subnet_id      = aws_subnet.subnet_b.id
+#   route_table_id = aws_route_table.private_b.id

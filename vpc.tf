@@ -1,3 +1,4 @@
+# My AOS notes  Personal projects 
 # Create VPC and other resources 
 # create vpc
 # terraform aws create vpc
@@ -80,51 +81,51 @@ resource "aws_route_table_association" "public_subnet_2_route_table_association"
 # create private app subnet az1
 # terraform aws create subnet
 resource "aws_subnet" "private_app_subnet_az1" {
-  vpc_id                   = aws_vpc.Dev-VPC.id
-  cidr_block               = var.private_app_subnet_az1_cidr
-  availability_zone        = "us-east-1a"
-  map_public_ip_on_launch  = false
+  vpc_id                  = aws_vpc.Dev-VPC.id
+  cidr_block              = var.private_app_subnet_az1_cidr
+  availability_zone       = "us-east-1a"
+  map_public_ip_on_launch = false
 
-  tags      = {
-    Name    = "private_app_subnet_az1"
+  tags = {
+    Name = "private_app_subnet_az1"
   }
 }
 
 # create private app subnet az2
 # terraform aws create subnet
 resource "aws_subnet" "private_app_subnet_az2" {
-  vpc_id                   = aws_vpc.Dev-VPC.id
-  cidr_block               = var.private_app_subnet_az2_cidr
-  availability_zone        = "us-east-1b"
-  map_public_ip_on_launch  = false
+  vpc_id                  = aws_vpc.Dev-VPC.id
+  cidr_block              = var.private_app_subnet_az2_cidr
+  availability_zone       = "us-east-1b"
+  map_public_ip_on_launch = false
 
-  tags      = {
-    Name    = "private_app_subnet_az2"
+  tags = {
+    Name = "private_app_subnet_az2"
   }
 }
 
 # create private data subnet az1
 # terraform aws create subnet
 resource "aws_subnet" "private_data_subnet_az1" {
-  vpc_id                   = aws_vpc.Dev-VPC.id
-  cidr_block               = var.private_data_subnet_az1_cidr
-  availability_zone        = "us-east-1a"
-  map_public_ip_on_launch  = false
+  vpc_id                  = aws_vpc.Dev-VPC.id
+  cidr_block              = var.private_data_subnet_az1_cidr
+  availability_zone       = "us-east-1a"
+  map_public_ip_on_launch = false
 
-  tags      = {
-    Name    = "private_data_subnet_az1"
+  tags = {
+    Name = "private_data_subnet_az1"
   }
 }
 
 # create private data subnet az2
 # terraform aws create subnet
 resource "aws_subnet" "private_data_subnet_az2" {
-  vpc_id                   = aws_vpc.Dev-VPC.id
-  cidr_block               = var.private_data_subnet_az2_cidr
-  availability_zone        = "us-east-1b"
-  map_public_ip_on_launch  = false
+  vpc_id                  = aws_vpc.Dev-VPC.id
+  cidr_block              = var.private_data_subnet_az2_cidr
+  availability_zone       = "us-east-1b"
+  map_public_ip_on_launch = false
 
-  tags      = {
-    Name    = "private_data_subnet_az2"
+  tags = {
+    Name = "private_data_subnet_az2"
   }
 }
